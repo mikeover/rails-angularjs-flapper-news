@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'angular-rails-templates'
+gem 'sprockets', '2.12.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
