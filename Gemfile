@@ -1,7 +1,9 @@
 source 'https://rubygems.org'
 
 gem 'angular-rails-templates'
-gem 'sprockets', '2.12.3'
+gem 'sprockets', '2.12.3' # Needed for angular-rails-templates inconsistency
+gem 'responders', '~> 2.0' # Needed for the app-controller level respond_to :json
+gem 'angular_rails_csrf' # For CSRF
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'

@@ -7,9 +7,14 @@ angular.module('flapperNews', ['ui.router', 'templates'])
     
     $stateProvider
       .state('home', {
-        url: '/home',
-        templateUrl: 'home/_home.html',
-        controller: 'MainCtrl'
+          url: '/home',
+          templateUrl: 'home/_home.html',
+          controller: 'MainCtrl',
+	  resolve: {
+	      postPromise: ['posts', function(posts){
+		  return posts.getAll();
+	      }]
+	  }
       })
       .state('posts', {
         url: '/posts/{id}',
